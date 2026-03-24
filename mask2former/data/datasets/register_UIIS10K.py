@@ -1,7 +1,10 @@
+import os
 from detectron2.data import MetadataCatalog, DatasetCatalog
 from detectron2.data.datasets import load_coco_json
 
-DATA_ROOT = '/data/bailab_data/hoangnv/UIIS10K/'
+# Dynamic data root: set DIVESEG_DATA_ROOT env var or defaults to data/UIIS10K/ relative to CWD
+DATA_ROOT = os.environ.get("DIVESEG_DATA_ROOT", os.path.join(os.getcwd(), "data", "UIIS10K"))
+DATA_ROOT = os.path.join(DATA_ROOT, "")  # ensure trailing slash
 
 def custom_dataset_loader(json_file, image_root):
     """Load COCO-format UIIS10K dataset and remap category IDs to 0-indexed."""

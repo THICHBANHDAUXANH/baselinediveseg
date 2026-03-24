@@ -5,7 +5,7 @@ MODEL:
   DIVESEG:
     FINETUNE: False
     NAME: 'vitl'
-    VIT_WEIGHT: "/data1/bailab_checkpoint/dino_vit/dinov2_vitl14_pretrain.pth"
+    VIT_WEIGHT: "./checkpoints/dinov2_vitl14_pretrain.pth"
     FREEZE_VIT: True
   PIXEL_MEAN: [81.022, 113.771, 117.232]
   PIXEL_STD: [60.591, 58.505, 62.858]

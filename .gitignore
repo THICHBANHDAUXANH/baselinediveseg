@@ -1,5 +1,10 @@
 # output dir
-output*
+out_put*
+
+# auto-generated dirs (from train_uiis10k.sh)
+.venv/
+data/
+checkpoints/
 
 *.json
 *.diff
