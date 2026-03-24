@@ -9,4 +9,5 @@ from . import (
     register_mapillary_vistas_panoptic,
     register_UIIS,
     register_USIS10K,
+    register_UIIS10K,
 )
